@@ -86,14 +86,17 @@ def __file_system__(root_folder: Folder) -> None:
         if command.strip().lower() == "enter":
             clear_screen()
             current_folder = current_folder.enter_pointed_subfolder()
-            previous_directory = current_folder.previous_folder_directory
+            previous_directory = current_folder.name
             current_folder.display_content()
             
         if command.strip().lower() == "back":
             clear_screen()
             current_folder = current_folder.previous_folder
-            previous_directory = current_folder.previous_folder_directory
-            current_folder.display_content()
+            if previous_directory: 
+                previous_directory = current_folder.previous_folder_directory
+                current_folder.display_content()
+            else:
+                pass 
             
         command = str(input("Enter command: "))
             
