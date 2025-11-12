@@ -1,10 +1,10 @@
 import os
+# i hear say na level 1 dis
+os.mkdir("main_folder-1")
 
-folder_head_name = "root_folder"
+#then na level 2 dis
+os.mkdir("main_folder-1/subfolder")
 
-# make the directory
-os.makedirs(folder_head_name)
-
-# listing all the folders inside our current directory
-for folders in os.listdir(os.curdir):
-    print(folders)
+#man go see something
+print("Folders created!")
+# hmm !!! Poor man pikin go see something
